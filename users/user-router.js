@@ -18,7 +18,7 @@ router.get("/:id", async (req, res, next) => {
             return res.status(404).json({
                 message: "User not found",
             })
-        } 
+        }
         res.json(user);
     } catch(err) {
         return next(err);
@@ -41,8 +41,8 @@ router.delete("/:id", async (req, res, next) => {
             return res.status(404).json({
                 message: "User not found",
             })
-        } 
-        res.status(200).json({ message: 'The user has been removed.' });
+        }
+        return res.status(201).json({ message: 'The user has been removed.' });
     } catch(err) {
         return next(err);
     };

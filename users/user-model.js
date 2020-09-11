@@ -14,7 +14,7 @@ async function add(data) {
 }
 
 function remove(id) {
-    return("users").where({id}).del()
+    return db("users").where({id}).del()
 }
 
 module.exports = {
